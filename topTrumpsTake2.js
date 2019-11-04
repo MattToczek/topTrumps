@@ -7,6 +7,8 @@ class Ukg {
         this.firstRelease = firstRelease;
         this.hChart = hChart;
     }
+
+
 }
 
 let soSolid = new Ukg( 'So Solid Crew', 1998, 1 );
@@ -81,6 +83,14 @@ let gameOver;
 let packSelect = document.getElementById("packSelect");          //selects label and input from HTML
 let packSelectL = document.getElementById("packSelectL");
 
+let dialogue = document.getElementById("dialogue");
+const cancel = document.getElementById("cancel");
+const submit = document.getElementById("submit");
+let cardTitle = document.getElementById("cardTitle");
+let opt1 = document.getElementById("opt1");
+let opt2 = document.getElementById("opt2");
+let opt1Check = document.getElementById("opt1Check");
+let opt2Check = document.getElementById("opt2Check");
 
 
 let = optionsShow = () => {
@@ -147,15 +157,15 @@ let deal = (deck) => {
     }
 }
 
+let keys = (card) => {             //                       0           1          2
+    Object.keys(card)             //returns array of keys [name, firstRelease, hChart]
+}
 
-let dialogue = document.getElementById("dialogue");
-let cancel = document.getElementsByClassName("cancel");
-let cardTitle = document.getElementById("cardTitle");
-let opt1 = document.getElementById("opt1");
-let opt2 = document.getElementById("opt2");
+
+
 
 //========================================================================================================================================================================
-// game play ==================================================================================================================================================
+// game play =============================================================================================================================================================
 
 
 let play = () => {
@@ -163,8 +173,8 @@ let play = () => {
     inPlay.unshift(playerTwo.hand[0]); //adds player1 card to inplay deck in position [0]
     inPlay.unshift(playerOne.hand[0]);  //adds player2 card to inplay deck in position [1]
     cardTitle.innerHTML =  `${turn[0].name}, it's your go! ${turn[0].hand[0].name} is your current card you can pick:`;
-    opt1.innerHTML +=  `First release : ${turn[0].hand[0].firstRelease}`;
-    opt2.innerHTML += `Highest chart position : ${turn[0].hand[0].hChart}`;
+    opt1.innerHTML =  `First release : ${turn[0].hand[0].firstRelease}`;
+    opt2.innerHTML = `Highest chart position : ${turn[0].hand[0].hChart}`;
 
     showDialogue();
 }
@@ -173,6 +183,7 @@ let endCheck = () => {
     
     if(playerTwo.cardCount() == 0 || playerOne.cardCount() == 0){                   // checks for empty hand and runs gameover 
         gameOverRun();
+        reset();
     }
 }
 
@@ -191,23 +202,32 @@ packSelect.addEventListener( 'change', () => {                   //hides label a
 
 let playOn = (val) => {
 
+    let p1Choice;
+
+    if (opt1Check.checked) {
+        p1Choice = 'First Release'
+    }else if (opt2Check.checked) {
+        p1Choice = 'Highest Chart Position'
+    }
+    
+
     hideDialogue();
     alert(`${JSON.stringify(playerOne.name)}, you played: \n
-    ${JSON.stringify(playerOne.hand[0].name)} and First Release: ${JSON.stringify(playerOne.hand[0].val)} \n
+    ${JSON.stringify(playerOne.hand[0].name)} and ${p1Choice}: ${JSON.stringify(playerOne.hand[0][val])} \n
     ${JSON.stringify(playerTwo.name)}, you played: \n
-    ${JSON.stringify(playerTwo.hand[0].name)} and First Release: ${JSON.stringify(playerTwo.hand[0].val)}`);
+    ${JSON.stringify(playerTwo.hand[0].name)} and ${p1Choice}: ${JSON.stringify(playerTwo.hand[0][val])}`);
     
     playerTwo.hand.shift();
     playerOne.hand.shift();
 
 
-    if (inPlay[0].val < inPlay[1].val) {      //adds inPlay stack to playerOne's hand if they win
+    if (inPlay[0][val] < inPlay[1][val]) {      //adds inPlay stack to playerOne's hand if they win
         playerOne.hand = playerOne.hand.concat(inPlay);
         inPlay = [];
         turn = [playerOne, playerTwo];
         alert(`${playerOne.name} you win! You now have ${playerOne.cardCount()} cards in your hand. \n 
         ${playerTwo.name} you have ${playerTwo.cardCount()} cards in your hand.`)
-    } else if(inPlay[0].val > inPlay[1].val){       //adds inPlay stack to playerOne's hand if they win
+    } else if(inPlay[0][val] > inPlay[1][val]){       //adds inPlay stack to playerOne's hand if they win
         playerTwo.hand = playerTwo.hand.concat(inPlay);
         inPlay = [];
         turn = [playerTwo, playerOne];
@@ -217,6 +237,7 @@ let playOn = (val) => {
         alert(`It's a draw - keep playing to win the pile!`);
         
     }
+
 
     endCheck();
     play();
@@ -228,27 +249,38 @@ let playOn = (val) => {
 //========================================================================================================================================================================
 // dialogue box and functions ===========================================================================================================================================
 
+cancel.onclick = function () {
+   
+    console.log('cancel');
+    
 
-cancel.addEventListener = ('click', () => {       //hides dialogue on cancel
     dialogue.style.display = "none";
     alert(`${turn[0].name} cancelled the game`);                                // alerts for a cancel and runs gameover 
     gameOverRun();
-});
+    optionsShow();
+};
 
-submit.addEventListener = ('click', () =>  {       //hides dialogue on cancel
+submit.onclick = function () {     
+    
+    console.log('submit');
+
+
     hideDialogue();
+    console.log(`this is option one: ${opt1Check.value}`)
+    console.log(`this is option two: ${opt2Check.value}`)
 
-    if (opt1.checked) {
+
+    if (opt1Check.checked) {
         playOn('firstRelease')
         // check if opt1 or opt2 is true when selected then create functions to continue play
-    } else if (opt2.checked) {
+    } else if (opt2Check.checked) {
         playOn('hChart')
         // check if opt1 or opt2 is true when selected then create functions to continue play
     } else {
         alert('Please select an option'); 
         showDialogue();
     }
-  });
+  };
 
 let showDialogue = () => {
     document.getElementById("dialogue").style.display = 'block';
