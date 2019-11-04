@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="dialogue.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    
+
+
+</head>
+<body>
+    <h1>Top Trumps</h1>
+
+    <label id = "packSelectL">Select Pack</label>
+    <select id = "packSelect">
+        <option id = "select1" value = "1">Please Select</option>
+        <option id = "select2" value = "2">UK Garage Artists</option>
+    </select>
+
+<!-- Dialogue box -->
+<div id="dialogue" class="modal">
+
+    <!-- dialogue content -->
+    <div class="dialogueCont">
+      <h2 id="cardTitle"></h2>
+      
+        <label id = "opt1"><input type="radio" name ="opt" value=1> </label> <br>
+        <label id = "opt2"><input type="radio" name ="opt" value=2> </label>
+     
+      <div id = 'btns'>
+        <button id="cancel">Cancel</button>
+        <button id="submit">Submit</button>
+      </div>
+    </div>
+  
+</div>
+  
+
+    
+    <script src="topTrumpsTake2.js"></script>
+</body>   
+    
+</html>
+
