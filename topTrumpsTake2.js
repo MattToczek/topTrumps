@@ -1,6 +1,6 @@
 // pack info ====================================================================================
 
-class Ukg {
+class Artist {
     constructor(name, firstRelease, hChart)
     {
         this.name = name;
@@ -11,36 +11,36 @@ class Ukg {
 
 }
 
-let soSolid = new Ukg( 'So Solid Crew', 1998, 1 );
-let hTwoO = new Ukg( 'H-Two-O', 2008, 2);
-let artful = new Ukg( 'Artful Dodger', 1997, 2);
-let msDyn = new Ukg( 'Ms Dynamite', 2000, 1);
-let wookie = new Ukg( 'Wookie' , 1991, 10);
-let mJCole = new Ukg( 'M. J. Cole', 1997, 10);
-let wideBoys = new Ukg( 'Wide Boys', 1996, 15);
-let sweetFA = new Ukg( 'Sweet Female Attitude', 1996, 2);
-let keleLeRoc = new Ukg( 'Kele Le Roc', 1995, 8);
-let oxideNeutrino = new Ukg( 'Oxide and Neutrino' , 1999, 1);
-let grantNelson = new Ukg( 'Grant Nelson', 1986, 92);
-let dJZinc = new Ukg( 'DJ Zinc', 1991, 27);
-let theStreets = new Ukg( 'The Streets', 1994, 1);
-let dBedingfield = new Ukg( 'Daniel Bedingfield', 2001, 1);
-let luckAndNeat = new Ukg( 'DJ Luck & MC Neat', 1999, 5);
-let shanksBigfoot = new Ukg( 'Shanks and Bigfoot', 1997, 1);
-let b15Project = new Ukg( 'B-15 Project', 1998, 7);
-let sunship = new Ukg( 'Sunship', 1997, 75);
-let oneEightSeven = new Ukg( '187 Lockdown' , 1997, 9);
-let dJSpoony = new Ukg( 'DJ Spoony', 2000, 48);
-let threeOfA = new Ukg( '3 Of A Kind', 2004, 1);
-let craigD = new Ukg( 'Craig David', 1997, 1);
-let rosieGaines = new Ukg( 'Rosie Gaines', 1985, 4);
-let mDubs = new Ukg( 'M-Dubs', 1994, 84);
-let deekline = new Ukg( 'Deekline', 1999, 11);
-let scottG = new Ukg( 'Scott Garcia', 1997, 29);
-let double = new Ukg( 'Double 99', 1995, 14);
-let sholaAma = new Ukg( 'Shola Ama', 1995, 4);
-let toddEdwards = new Ukg( 'Todd Edwards', 1992, 69);
-let piedPiper = new Ukg( 'DJ Pied Piper', 2000, 1);
+let soSolid = new Artist( 'So Solid Crew', 1998, 1 );
+let hTwoO = new Artist( 'H-Two-O', 2008, 2);
+let artful = new Artist( 'Artful Dodger', 1997, 2);
+let msDyn = new Artist( 'Ms Dynamite', 2000, 1);
+let wookie = new Artist( 'Wookie' , 1991, 10);
+let mJCole = new Artist( 'M. J. Cole', 1997, 10);
+let wideBoys = new Artist( 'Wide Boys', 1996, 15);
+let sweetFA = new Artist( 'Sweet Female Attitude', 1996, 2);
+let keleLeRoc = new Artist( 'Kele Le Roc', 1995, 8);
+let oxideNeutrino = new Artist( 'Oxide and Neutrino' , 1999, 1);
+let grantNelson = new Artist( 'Grant Nelson', 1986, 92);
+let dJZinc = new Artist( 'DJ Zinc', 1991, 27);
+let theStreets = new Artist( 'The Streets', 1994, 1);
+let dBedingfield = new Artist( 'Daniel Bedingfield', 2001, 1);
+let luckAndNeat = new Artist( 'DJ Luck & MC Neat', 1999, 5);
+let shanksBigfoot = new Artist( 'Shanks and Bigfoot', 1997, 1);
+let b15Project = new Artist( 'B-15 Project', 1998, 7);
+let sunship = new Artist( 'Sunship', 1997, 75);
+let oneEightSeven = new Artist( '187 Lockdown' , 1997, 9);
+let dJSpoony = new Artist( 'DJ Spoony', 2000, 48);
+let threeOfA = new Artist( '3 Of A Kind', 2004, 1);
+let craigD = new Artist( 'Craig David', 1997, 1);
+let rosieGaines = new Artist( 'Rosie Gaines', 1985, 4);
+let mDubs = new Artist( 'M-Dubs', 1994, 84);
+let deekline = new Artist( 'Deekline', 1999, 11);
+let scottG = new Artist( 'Scott Garcia', 1997, 29);
+let double = new Artist( 'Double 99', 1995, 14);
+let sholaAma = new Artist( 'Shola Ama', 1995, 4);
+let toddEdwards = new Artist( 'Todd Edwards', 1992, 69);
+let piedPiper = new Artist( 'DJ Pied Piper', 2000, 1);
 
 let ukGDeck = [soSolid, hTwoO , artful, msDyn, wookie, mJCole,
     wideBoys, sweetFA, keleLeRoc, oxideNeutrino, 
@@ -51,7 +51,29 @@ let ukGDeck = [soSolid, hTwoO , artful, msDyn, wookie, mJCole,
     sholaAma, toddEdwards, piedPiper];
 
 
+let goldie = new Artist ( 'Goldie', 1995, 13);
+let shyFX = new Artist ( 'Shy FX', 1992, 7);
+let djHype = new Artist ( 'DJ Hype', 1989, 63)
+let ltjBukem = new Artist ( 'LTJ Bukem', 1991, 40)
+let andyC = new Artist ( 'Andy C', 1993, 50)
+let rebelMC = new Artist ( 'Rebel MC', 1989, 3)
+let ronnieSize = new Artist ( 'Ronnie Size', 1988, 17)
+let grooverider = new Artist ( 'Grooverider', 1986, 40)
+let edRush= new Artist ( 'Ed Rush', 1992, 61)
+let remarc = new Artist ( 'Remarc', 1992, 100)
+let aphrodite = new Artist ( 'Aphrodite', 1990, 68)
+let dillinja = new Artist ( 'Dillinja', 1991, 35)
+let ldnElek = new Artist ( 'London Elektricity', 1996, 77)
+let adamF = new Artist ( 'Adam F', 1996, 11)
+let mFinn = new Artist ( 'Mickey Finn', 1991, 100)
+let slipmatt = new Artist ( 'Slipmatt', 1989, 41)
+let skibadee = new Artist ( 'Skibadee', 1993, 100)
+let squarepusher = new Artist ( 'Squarepusher', 1992, 89)
+let tC = new Artist ( 'TC', 1999, 100)
 
+let jungleDeck = [ goldie, shyFX, djHype, ltjBukem, andyC, rebelMC, 
+    ronnieSize, grooverider, edRush, remarc, aphrodite, dillinja, 
+    ldnElek, adamF, mFinn, slipmatt, skibadee, squarepusher, tC ]
 
 //================================================================================================================
 // making players ================================================================================================
@@ -91,6 +113,7 @@ let opt1 = document.getElementById("opt1");
 let opt2 = document.getElementById("opt2");
 let opt1Check = document.getElementById("opt1Check");
 let opt2Check = document.getElementById("opt2Check");
+let currentDeck;
 
 
 let = optionsShow = () => {
@@ -109,7 +132,7 @@ let winner = () => {                                        // compares number o
     } else if (playerOne.hand < playerTwo.hand) {
         return playerTwo.name;
     }else{
-        'Nobody';
+        return 'Nobody';
     }  
 }
 
@@ -119,7 +142,7 @@ let gameOverRun = () =>{                                    // assigns winner to
     The score was: \n
     ${playerOne.name}: ${playerOne.cardCount()}\n
     ${playerTwo.name}: ${playerTwo.cardCount()}`)             
-    end = true;
+    reset();
    
 }
 
@@ -137,7 +160,7 @@ let reset = () => {                                         // clears hands, set
 let shuffle = (deck) => {
     for (let i = 0; i < deck.length; i++) {
         let temp = '';                                              // temp = slot to store shuffling card
-        let num = Math.floor(Math.random() * Math.floor(30));       //Returns random number 0-29         
+        let num = Math.floor(Math.random() * Math.floor(deck.length));       //Returns random number 0-deck.length        
         temp = deck[i];
         deck[i] = deck[num];                                        //swaps card[i] with card[random number]
         deck[num] = temp;
@@ -156,12 +179,6 @@ let deal = (deck) => {
         
     }
 }
-
-let keys = (card) => {             //                       0           1          2
-    Object.keys(card)             //returns array of keys [name, firstRelease, hChart]
-}
-
-
 
 
 //========================================================================================================================================================================
@@ -187,16 +204,21 @@ let endCheck = () => {
     }
 }
 
-let start = () => {
-    shuffle(ukGDeck);
-    deal(ukGDeck);
+let start = (deck) => {
+    shuffle(deck);
+    deal(deck);
     play();
 }
 
 packSelect.addEventListener( 'change', () => {                   //hides label and input from HTML when used
     packSelect.style.display = 'none';
     packSelectL.style.display = 'none';
-    start();                                                    //to be created as a function to start game
+    if (packSelect.value ==  2){
+        currentDeck = ukGDeck;
+    } else if(packSelect.value == 3){
+        currentDeck = jungleDeck;
+    }
+    start(currentDeck);                                                    //to be created as a function to start game
 })
 
 
@@ -238,6 +260,9 @@ let playOn = (val) => {
         
     }
 
+    opt1Check.checked = false;
+    opt2Check.checked = false;
+
 
     endCheck();
     play();
@@ -257,6 +282,7 @@ cancel.onclick = function () {
     dialogue.style.display = "none";
     alert(`${turn[0].name} cancelled the game`);                                // alerts for a cancel and runs gameover 
     gameOverRun();
+
     optionsShow();
 };
 
@@ -271,13 +297,13 @@ submit.onclick = function () {
 
 
     if (opt1Check.checked) {
-        playOn('firstRelease')
-        // check if opt1 or opt2 is true when selected then create functions to continue play
+        playOn('firstRelease')          // check if opt1 is checked when selected then continues play accordingly
+        
     } else if (opt2Check.checked) {
-        playOn('hChart')
-        // check if opt1 or opt2 is true when selected then create functions to continue play
+        playOn('hChart')                // check if opt2 is checked when selected then continues play accordingly
+        
     } else {
-        alert('Please select an option'); 
+        alert('Please select an option');    // tests for no response and prompts response
         showDialogue();
     }
   };
